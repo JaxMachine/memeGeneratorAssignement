@@ -22,8 +22,9 @@ h1{
     padding: 25px;
     border-width: 10px 0px 10px 0px;
     border-style: solid;
-    margin: 0.25em 0 0;
+    margin: 0.05em 0 0;
     background-color: hsl(199deg, 100%, 47%);
+    border-color: hsl(199, 84%, 63%);
 }
 
 .Page-Header{
@@ -40,6 +41,7 @@ h1{
     display: flex;
     justify-content: center;
     position: relative;
+    flex-direction: column;
     box-sizing: inherit;
     width: 100%;
     height: 750px;
@@ -48,12 +50,38 @@ h1{
     margin: 0%;
     border-width: 10px 0px 10px 0px;
     border-style: solid;
+    border-color: hsl(199, 84%, 63%);
+}
+
+.memeDiv{
+    text-align: center;
+    font-size: 5.5vb;
+    margin: auto;
+    /* flex-direction: column; */
+}
+.memeImage{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+
+}
+
+.topMemeText, .bottomMemeText{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+.topMemeText{
+    position: relative;
+    top:10%;
+}
+.bottomMemeText{
+    position: relative;
+    bottom:12%;
 }
 
 .Page-Footer{
     display: flex;
     position: relative;
-    flex-direction: column;
     justify-content: center;
     margin: auto;
     padding: 15px;
