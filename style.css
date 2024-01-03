@@ -6,8 +6,6 @@ body{
     margin: 0px;
 }
 .wrapper{
-    display: flex;
-    justify-content: center;
     flex-direction: column;
     position: relative;
     width: inherit;
@@ -16,8 +14,7 @@ body{
 h1{
     font-family: 'Bebas Neue';
     font-size: 100px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     vertical-align: middle;
     padding: 25px;
     border-width: 10px 0px 10px 0px;
@@ -27,64 +24,81 @@ h1{
     border-color: hsl(199, 84%, 63%);
 }
 
+ul{
+    list-style: none;
+}
+
 .Page-Header{
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: center;
     margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: 75%;
-    padding: 15px;
-    
 }
 .Page-Body{
-    display: flex;
-    justify-content: center;
     position: relative;
-    flex-direction: column;
     box-sizing: inherit;
     width: 100%;
-    height: 750px;
-    padding-top: 10px;
+    height: 100%;
+    padding-top: 50px;
     padding-bottom: 10px;
     margin: 0%;
     border-width: 10px 0px 10px 0px;
     border-style: solid;
     border-color: hsl(199, 84%, 63%);
 }
+#meme-Display{
+    position: relative;
+    min-height: 50vh;
+}
+#memeList{
+    flex: auto;
+    max-width: fit-content;
+    margin: 0 auto;
+}
 
-.memeDiv{
+.memeLi{
+    flex: auto;
+    position: relative;
+    font-size: 5.5dvh;
+    height: 650px;
+    width: 700px;
     text-align: center;
-    font-size: 5.5vb;
-    margin: auto;
-    /* flex-direction: column; */
+    margin-bottom: 150px;
 }
 .memeImage{
-    width: inherit;
-    height: inherit;
+    z-index: -999;
     object-fit: cover;
-
 }
 
 .topMemeText, .bottomMemeText{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
 }
 .topMemeText{
-    position: relative;
-    top:10%;
+    top:1%;
 }
 .bottomMemeText{
-    position: relative;
-    bottom:12%;
+    bottom: 1%;
 }
-
-.Page-Footer{
-    display: flex;
+.deleteButton{
     position: relative;
-    justify-content: center;
-    margin: auto;
-    padding: 15px;
+    z-index: 1;
+}
+.resetButton{
+    position: relative;
+}
+#Footer{
+    position: relative;
+    text-align: center;
+    bottom: 0;
+    margin: 1%;
+    width: 100%;
+    height: 2.5rem;  
 }
 form{
     font-family: 'Bebas Neue';
