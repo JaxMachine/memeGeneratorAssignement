@@ -18,11 +18,39 @@ submitButton.addEventListener("click", function(event){
     const topText = document.querySelector("#Top-Text");
     const bottomText = document.querySelector("#Bottom-Text");
     const imageURL = document.querySelector("#image-url");
-    // const imageDisplay = document.querySelector("#meme-Display");
-    // imageDisplay.innerHTML='';
+
+    const topLabel = document.getElementById("topLabel");
+    const bottomLabel = document.getElementById("bottomLabel");
+    const urlLabel = document.getElementById("urlLabel");
+
 
     const imageLi = document.createElement("li");
     const imageDiv = document.createElement("div");
+
+    if(!topText.value){
+        console.log("No TopText!")
+        topLabel.classList.add("empty")
+        setTimeout(() => {
+            topLabel.classList.remove("empty")
+        }, "2000");
+        return;
+    }
+    if(!bottomText.value){
+        console.log("No BottomText!")
+        bottomLabel.classList.add("empty")
+        setTimeout(() => {
+            bottomLabel.classList.remove("empty")
+        }, "2000");
+        return;
+    }
+    if(!imageURL.value){
+        console.log("No ImageURL!")
+        urlLabel.classList.add("empty")
+        setTimeout(() => {
+            urlLabel.classList.remove("empty")
+        }, "2000");
+        return;
+    }
 
     const deleteButton =  document.createElement("button")
     const deleteButtonFront = document.createElement("Span");

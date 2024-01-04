@@ -1,4 +1,14 @@
-
+@keyframes flash{
+    0%{
+        color: white;
+    }
+    50%{
+        color: red;
+    }
+    100%{
+        color:white
+    }
+}
 
 body{
     background-color: darkblue;
@@ -104,6 +114,9 @@ form{
     font-family: 'Bebas Neue';
     font-size: 20px;
 }
+input::placeholder{
+    opacity: 0.5;
+}
 
 input{
     width: 100%;
@@ -144,4 +157,8 @@ button{
   }
   .pushable:active .front {
     transform: translateY(-2px);
+  }
+
+  .empty{
+    animation: flash 1s linear infinite;
   }
